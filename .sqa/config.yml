@@ -1,0 +1,42 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/ai4os/ai4-papi:
+      branch: master
+      repo: https://github.com/ai4os/ai4-papi
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ai4os/ai4-papi git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-ultramarine-centipede.sh
+        container: qc.acc_skanky-tan-birman
+  QC.Doc:
+    repos:
+      github.com/ai4os/ai4-papi find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-brass-monkey.sh
+        container: qc.doc_boozy-black-abyssinian
+      github.com/ai4os/ai4-papi git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-black-nightingale.sh
+        container: qc.doc_skinny-peach-cow
+  QC.Lic:
+    repos:
+      github.com/ai4os/ai4-papi licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-purple-akita.sh
+        container: qc.lic_sloppy-ecru-dane
+  QC.Ver:
+    repos:
+      github.com/ai4os/ai4-papi get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-wheat-bandicoot.sh
+        container: qc.ver_frumpy-cream-dogfish
+timeout: 5400
