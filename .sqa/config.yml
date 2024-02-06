@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       github.com/ai4os/ai4-papi git:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-charcoal-bear.sh
-        container: qc.acc_cranky-olivine-terrier
+        - /usr/bin/env sh .sqa/script.tasty-violet-armadillo.sh
+        container: qc.acc_cozy-cardinal-coyote
   QC.Doc:
     repos:
       github.com/ai4os/ai4-papi find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-goldenrod-capybara.sh
-        container: qc.doc_grumpy-sepia-liger
+        - /usr/bin/env sh .sqa/script.squirrely-asparagus-barb.sh
+        container: qc.doc_gloppy-goldenrod-mouse
       github.com/ai4os/ai4-papi git:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-bistre-dugong.sh
-        container: qc.doc_paltry-coral-penguin
+        - /usr/bin/env sh .sqa/script.frumpy-olivine-birman.sh
+        container: qc.doc_shaggy-tan-paradise
   QC.Lic:
     repos:
       github.com/ai4os/ai4-papi licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-maroon-caterpillar.sh
-        container: qc.lic_wiggy-brown-paradise
+        - /usr/bin/env sh .sqa/script.bluesy-chestnut-wallaby.sh
+        container: qc.lic_cheeky-persimmon-setter
   QC.Ver:
     repos:
       github.com/ai4os/ai4-papi get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-razzmatazz-dachsbracke.sh
-        container: qc.ver_scummy-maroon-coral
+        - /usr/bin/env sh .sqa/script.wimpy-sepia-bee.sh
+        container: qc.ver_squeaky-ultramarine-cuttlefish
 timeout: 5400
